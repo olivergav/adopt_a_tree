@@ -135,7 +135,7 @@ a, .link {
   color: $color-link;
   text-decoration: none;
   cursor: pointer;
-  transition: $transition-ease-in-out-quart;
+  transition: $transition-ease-in;
 
   &:hover {
     color: $color-link-hover;
