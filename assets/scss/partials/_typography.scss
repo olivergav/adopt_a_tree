@@ -108,10 +108,60 @@ $headings-sizes-map: (
   }
 }
 
-// HTML Elements: Paragraphs
+// HTML Elements: paragraphs
 p {
   margin-bottom: $spacing;
 }
 
 
+//// HTML Elements: lists: unordered and ordered
+ul, ol {
+  list-style-position: inside;
+  margin-bottom: $spacing;
+  padding-left: $spacing;
 
+  li {
+    margin-bottom: $spacing;
+  }
+}
+
+ul {
+  list-style-type: decimal;
+}
+
+
+//// HTML Elements: links
+a, .link {
+  color: $color-link;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition-ease-in-out-quart;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:focus {
+    outline: 1px solid $color-focus;
+  }
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: links: action
+
+.link-action {
+  color: $brand-2;
+  font-weight: $font-bold;
+}
+
+.link-action-icon {
+  color: $brand-1-light;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.link-action-text {
+  text-transform: uppercase;
+  vertical-align: middle;
+}
