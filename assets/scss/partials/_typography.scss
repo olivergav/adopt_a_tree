@@ -1,0 +1,117 @@
+@import './variables';
+// ----------------------------
+// TYPOGRAPHY
+
+
+// ----------------------------
+// TYPOGRAPHY: fonts: families
+.font-family-1 {
+  font-family: $font-family-1;
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: fonts: sizes
+// E.G. font-size, font-size-sm, font-size-lg
+
+// Sass map to store font-sizes:
+$font-sizes-map: (
+        "font-size": $font-size,
+        "font-size-sm": $font-size-sm,
+        "font-size-lg": $font-size-lg
+);
+
+// @each Sass loop to generate classes
+@each $name, $value in $font-sizes-map {
+  .#{$name} {
+    font-size: $value;
+  }
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: fonts: weight
+// E.G. font-regular, font-semi-bold font-bold
+
+// Sass map to store font weights
+$font-weights-map: (
+        "font-regular": $font-regular,
+        "font-semi-bold": $font-semi-bold,
+        "font-bold": $font-bold
+);
+
+@each $name, $value in $font-weights-map {
+  .#{$name} {
+    font-weight: $value;
+  }
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: alignment
+
+//Sass list to store font alignments
+$font-alignments-list: 'left', 'right', 'center', 'justify';
+
+@each $variable in $font-alignments-list {
+  .text-#{$variable} {
+    text-align: #{$variable};
+  }
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: text
+
+//Sass list to store text transforms
+$font-text-list: 'uppercase', 'underline';
+
+@each $variable in $font-text-list {
+  .text-#{$variable} {
+    text-decoration: underline;
+  }
+}
+
+
+// ----------------------------
+// TYPOGRAPHY: html, elements
+strong, b {
+  font-weight: $font-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+
+// ----------------------------
+// HTML Elements: Headings
+
+// Sass map to store headings sizes
+$headings-sizes-map: (
+        "h1": $h1,
+        "h2": $h2,
+        "h3": $h3,
+        "h4": $h4,
+        "h5": $h5,
+        "h6": $h6,
+);
+
+// @each sass loop to generate styles for html headings h1-h6
+@each $name, $value in $headings-sizes-map {
+  #{$name} {
+    font-size: $value;
+    color: $gray-coal;
+    font-weight: $font-semi-bold;
+    line-height: 1.2;
+    margin: 0 0 $spacing-2;
+  }
+}
+
+// HTML Elements: Paragraphs
+p {
+  margin-bottom: $spacing;
+}
+
+
+
