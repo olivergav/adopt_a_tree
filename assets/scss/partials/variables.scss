@@ -108,4 +108,24 @@ $media-sm: toRem(600px);
 $media-sm-max: toRem(768px);
 $media-lg: toRem(1200px);
 
-$grid-gutter: toRem(7.5px)
+$grid-gutter: toRem(7.5px);
+
+
+// ----------------------------
+// VARIABLES: border-radius
+$border-radius: toRem(10px);
+$border-radius-lg: ($border-radius * 2);
+$border-radius-xl: ($border-radius * 3);
+
+
+// ----------------------------
+// VARIABLES: buttons
+$btn-padding-v: $spacing;
+$btn-padding-v-sm: $spacing-half;
+$btn-padding-v-xs: $spacing-half;
+
+$btn-padding-h: $spacing-3;
+$btn-padding-h-sm: math.div($spacing-3, 2);
+$btn-padding-h-xs: math.div($spacing-3, 2);
+
+$box-shadow: 0 toRem(4px) toRem(10px) rgba($black, 0.1)
