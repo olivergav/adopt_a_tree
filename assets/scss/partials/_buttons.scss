@@ -133,3 +133,54 @@
   @include btn-hollow--white;
 }
 
+// ----------------------------
+// BUTTONS: size modifiers
+
+@mixin btn--sm {
+  font-size: $font-size-sm;
+  padding: $btn-padding-v-sm $spacing-3;
+}
+
+.btn--sm {
+  @include btn--sm;
+}
+
+
+@mixin btn--xs {
+  font-size: $font-size-xs;
+  padding: $btn-padding-v-xs $btn-padding-h-xs;
+  line-height: 1.2;
+}
+
+.btn--xs {
+  @include btn--xs;
+}
+
+.btn--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@mixin btn-reset {
+  color: $color-font;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $font-family-1;
+  font-size: $font-size;
+  font-weight: $font-regular;
+  line-height: $line-height;
+  text-align: left;
+  text-transform: inherit;
+  padding: 0;
+
+  &:hover {
+    color: $color-font;
+    background-color: transparent;
+  }
+}
+
+.btn-reset {
+  @include btn-reset;
+}
