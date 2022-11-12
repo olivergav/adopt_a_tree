@@ -136,5 +136,27 @@ $box-shadow: 0 toRem(4px) toRem(10px) rgba($black, 0.1);
 $color-input-border: $gray-cloud;
 $color-input-placeholder: $gray-titanium;
 
+
+// ----------------------------
 // VARIABLES: assets path
 $svg-path: '../svg';
+
+// ----------------------------
+// VARIABLES: media queries breakpoints
+$media-lg: toRem(1200px);
+$media-md: toRem(900px);
+$media-sm: toRem(600px);
+
+$toRem1px: toRem(1px);
+
+$media-lg: $media-lg - $toRem1px;
+$media-md: $media-md - $toRem1px;
+$media-sm: $media-sm - $toRem1px;
+
+
+// ----------------------------
+// VARIABLES: grid gutters
+$grid-column-count: 12;
+$grid-gutter: toRem(7.5px);
+$grid-gutter-sm: math.div($grid-gutter, 2);
+$grid-gutter-lg: ($grid-gutter * 2);
