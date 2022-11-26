@@ -6,7 +6,7 @@
 // STYLE GUIDE
 
 //* {
-  //font-size: 16px;
+//font-size: 16px;
 //}
 
 
@@ -281,4 +281,13 @@ ul {
   @include mq(lg) {
     background-color: green;
   }
+
+  @media screen and (orientation: landscape) {
+    background-color: pink;
+  }
+
+  @media screen and (orientation: portrait) {
+    background-color: lightgoldenrodyellow;
+  }
+
 }
