@@ -267,27 +267,3 @@ ul > li {
 ul {
   padding-left: 0;
 }
-
-.styleguide {
-  background: silver;
-  transition: all 400ms;
-
-  @include mq(sm) {
-    background-color: red;
-  }
-  @include mq(md) {
-    background-color: gold;
-  }
-  @include mq(lg) {
-    background-color: green;
-  }
-
-  @media screen and (orientation: landscape) {
-    background-color: pink;
-  }
-
-  @media screen and (orientation: portrait) {
-    background-color: lightgoldenrodyellow;
-  }
-
-}
