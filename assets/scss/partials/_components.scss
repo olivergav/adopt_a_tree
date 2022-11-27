@@ -1,4 +1,6 @@
+@use 'sass:math';
 @import 'variables';
+@import 'globals';
 // ---------------------------------------------
 // COMPONENTS
 
@@ -68,7 +70,7 @@
 @mixin overlay($color-bg: rgba($brand-2, 0.5)) {
   background-color: $color-bg;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -78,6 +80,10 @@
 
 .overlay {
   @include overlay;
+
+  &--card-banner {
+    border-radius: $border-radius $border-radius 0 0;
+  }
 }
 
 
@@ -93,6 +99,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &-content {
     color: $white;
@@ -110,6 +117,97 @@
     font-style: italic;
     font-weight: $font-semi-bold;
   }
+}
 
 
+// ---------------------------------------------
+// COMPONENTS: LISTS: STYLED: LIST BLOCK
+
+.btn--list-each {
+  position: relative;
+  top: -($spacing * 1.4);
+}
+
+
+// ---------------------------------------------
+// COMPONENTS: CARDS
+
+.card {
+  border-radius: $border-radius;
+  background-color: $white;
+  box-shadow: $box-shadow;
+
+  &-banner {
+    position: relative;
+  }
+
+  &-banner-img {
+    border-radius: $border-radius $border-radius 0 0;
+    width: 100%;
+    display: block;
+  }
+
+  &-banner-content {
+    color: $white;
+    padding: ($spacing * 1.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &-location, &-tree-cost {
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &-tree-cost {
+    margin-left: auto;
+  }
+
+  &-banner-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: $font-bold;
+    width: calc(100% - #{$spacing-3});
+
+    @extend .vertical-center;
+  }
+
+  &-banner-icons {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: ($spacing * 1.5);
+  }
+
+  &-banner-icon {
+    font-size: $icon-size-xl;
+
+    @include icon-right;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &-content {
+    padding: ($spacing * 1.5);
+    position: relative;
+  }
+
+  &-progress-text {
+    font-size: $font-size-sm;
+    font-weight: $font-bold;
+    padding: $spacing 0 0;
+  }
+
+  &-progress-target {
+    margin-left: auto;
+  }
 }
